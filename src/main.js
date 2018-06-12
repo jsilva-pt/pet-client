@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Vuetify from 'vuetify'
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
@@ -7,6 +8,8 @@ import App from './App'
 import router from './router'
 import i18n from './i18n'
 import store from './store'
+import 'vuetify/dist/vuetify.min.css'
+// import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 Vue.config.productionTip = false
 
@@ -28,6 +31,7 @@ const apolloProvider = new VueApollo({
 
 // Install the vue plugin
 Vue.use(VueApollo)
+Vue.use(Vuetify)
 
 /* eslint-disable no-new */
 new Vue({

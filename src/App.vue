@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <v-app light class="grey lighten-4">
     <router-view></router-view>
-  </div>
+  </v-app>
 </template>
 
 <script>

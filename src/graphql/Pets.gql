@@ -1,1 +1,8 @@
-query {pets {name}}
+query {
+  pets {
+    name,
+    gender,
+    images,
+    color
+  }
+}

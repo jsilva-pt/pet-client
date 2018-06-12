@@ -13,13 +13,13 @@ export default new Router({
     },
     {
       path: '/list',
-      name: 'list',
-      component: () => import(/* webpackChunkName: "view - List" */ '@/views/List.vue')
+      name: 'pets-list',
+      component: () => import(/* webpackChunkName: "view - List" */ '@/views/PetsList.vue')
     },
     {
-      path: '/list-again',
-      name: 'list-again',
-      component: () => import(/* webpackChunkName: "view - List" */ '@/views/ListAgain.vue')
+      path: '/add',
+      name: 'pets-add',
+      component: () => import(/* webpackChunkName: "view - Add" */ '@/views/PetsAdd.vue')
     }
   ]
 })
