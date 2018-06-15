@@ -1,5 +1,5 @@
-query {
-  pets {
+query pets ($page: Int!) {
+  pets (page: $page) {
     name,
     gender,
     images,

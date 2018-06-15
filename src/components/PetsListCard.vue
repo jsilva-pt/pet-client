@@ -1,10 +1,10 @@
 <template>
   <div class="pets-list-card card">
-    <img :src="pet.images[0]" />
+    <img v-if="pet.images" :src="pet.images[0]" />
     <div class="pet-info pa-2">
       <span class="title">{{ pet.name }}</span>
       <span>{{ pet.gender }}</span>
-      <span>{{ pet.color.join(', ') }}</span>
+      <span v-if="pet.color">{{ pet.color.join(', ') }}</span>
     </div>
   </div>
 </template>
