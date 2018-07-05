@@ -1,0 +1,8 @@
+mutation PetCreate($name: String!, $gender: String!, $color: [String]!) {
+  addPet(name: $name, gender: $gender, color: $color) {
+    name,
+    gender,
+    color
+  }
+}
+  
