@@ -31,6 +31,18 @@
               class="mb-2"
             ></pets-list-card>
           </router-link>
+
+          <v-btn
+            fixed
+            dark
+            fab
+            bottom
+            right
+            color="primary"
+            @click="$router.push({name: 'pets-add'})"
+          >
+            <v-icon>add</v-icon>
+          </v-btn>
         </div>
 
         <!-- No result -->
@@ -67,7 +79,7 @@ export default {
     },
     loadMore (evt) {
       if ((window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - 200)) {
-        this.page++
+        // this.page++
       }
     }
   }
