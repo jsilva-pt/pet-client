@@ -3,6 +3,7 @@
 > A Vue.js project
 
 [![Build Status](https://travis-ci.org/jsilva-pt/pet-client.svg?branch=master)](https://travis-ci.org/jsilva-pt/pet-client)
+[![codebeat badge](https://codebeat.co/badges/bd91539a-c6c3-4c45-94e1-1de37190468a)](https://codebeat.co/projects/github-com-jsilva-pt-pet-client-master)
 
 ## Build Setup
 
