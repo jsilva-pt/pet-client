@@ -1,0 +1,3 @@
+mutation PetDelete($_id: String!) {
+  removePet(_id: $_id)
+}

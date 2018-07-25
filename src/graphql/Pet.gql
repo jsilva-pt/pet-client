@@ -1,0 +1,8 @@
+query pet ($_id: String!) {
+  pet (_id: $_id) {
+    name,
+    gender,
+    images,
+    color
+  }
+}

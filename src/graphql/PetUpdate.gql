@@ -1,0 +1,8 @@
+mutation PetCreate($_id: String!, $name: String, $gender: String, $color: [String]) {
+  updatePet(_id: $_id, name: $name, gender: $gender, color: $color) {
+    name,
+    gender,
+    color
+  }
+}
+  

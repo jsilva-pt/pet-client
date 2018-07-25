@@ -22,9 +22,14 @@ export default new Router({
       component: () => import(/* webpackChunkName: "view - Add" */ '@/views/PetsAdd.vue')
     },
     {
-      path: '/pet-details',
+      path: '/pet/:id',
       name: 'pet-details',
       component: () => import(/* webpackChunkName: "view - Pet Details" */ '@/views/PetDetails.vue')
+    },
+    {
+      path: '/pet/:id/edit',
+      name: 'pet-edit',
+      component: () => import(/* webpackChunkName: "view - Pet Edit" */ '@/views/PetsEdit.vue')
     }
   ]
 })

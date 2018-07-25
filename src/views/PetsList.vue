@@ -3,12 +3,12 @@
     <!-- <v-btn @click="$router.go(-1)">go back</v-btn> -->
     <ApolloQuery
       :query="require('../graphql/Pets.gql')"
-      :variables="{ 'page': 1 }"
+      :variables="{ 'page': 1, perPage }"
     >
       <ApolloSubscribeToMore
         v-if="page > 1"
         :document="require('../graphql/Pets.gql')"
-        :variables="{ page }"
+        :variables="{ page, perPage }"
         :updateQuery="onMessageAdded"
       />
 
@@ -21,16 +21,12 @@
 
         <!-- Result -->
         <div v-else-if="data && data.pets" class="result apollo">
-          <router-link
-            tag="div"
-            :to="{name: 'pet-details'}"
-          >
-            <pets-list-card
-              :key="index" v-for="(pet, index) in data.pets"
-              :pet="pet"
-              class="mb-2"
-            ></pets-list-card>
-          </router-link>
+          
+          <pets-list-card
+            :key="index" v-for="(pet, index) in data.pets"
+            :pet="pet"
+            class="mb-2"
+          ></pets-list-card>
 
           <v-btn
             fixed
@@ -58,7 +54,8 @@ export default {
   name: 'pets-list',
   data () {
     return {
-      page: 1
+      page: 1,
+      perPage: 5
     }
   },
   components: {
